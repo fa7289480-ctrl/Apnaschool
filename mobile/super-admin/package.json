@@ -1,0 +1,22 @@
+{
+  "name": "apnaschool-super-admin",
+  "version": "1.0.0",
+  "author": "Ranjha Farhan",
+  "private": true,
+  "description": "ApnaSchool Super Admin Capacitor Android app",
+  "scripts": {
+    "sync": "npx cap sync android",
+    "open": "npx cap open android",
+    "add:android": "npx cap add android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/splash-screen": "^6.0.3",
+    "@capacitor/status-bar": "^6.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0"
+  }
+}

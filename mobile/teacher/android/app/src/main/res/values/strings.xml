@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ApnaSchool Teacher</string>
+    <string name="title_activity_main">ApnaSchool Teacher</string>
+    <string name="package_name">pk.apnaschool.teacher</string>
+    <string name="custom_url_scheme">pk.apnaschool.teacher</string>
+</resources>

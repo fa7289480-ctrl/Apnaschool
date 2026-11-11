@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#165ddd">
+  <meta name="apnaschool-api-base" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>ApnaSchool Teacher</title>
+  <style>
+    :root { --bg:#f0f5ff; --card:#fff; --primary:#165ddd; --text:#173052; --muted:#647995; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.45 system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 16px; padding-bottom: 88px; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    h1 { font-size: 1.25rem; margin: 0; }
+    .muted { color: var(--muted); font-size: .9rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    a.card { display: block; background: var(--card); border-radius: 14px; padding: 16px; text-decoration: none; color: inherit; border: 1px solid #dfe8f5; box-shadow: 0 1px 2px rgba(22,93,221,.06); }
+    a.card strong { display: block; margin-bottom: 4px; }
+    a.card span { font-size: .85rem; color: var(--muted); }
+    .nav { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid #e0e8f3; display: flex; justify-content: space-around; padding: 10px 8px calc(10px + env(safe-area-inset-bottom)); }
+    .nav a { text-decoration: none; color: var(--muted); font-size: .75rem; text-align: center; }
+    .nav a.active { color: var(--primary); font-weight: 600; }
+    .banner { background: #edf3ff; border-radius: 12px; padding: 12px; margin-bottom: 14px; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Teacher</h1>
+      <p class="muted" id="who">ApnaSchool mobile</p>
+    </div>
+    <a href="../login.html" class="muted">Sign out</a>
+  </header>
+  <div class="banner">Use the same school login (email or public ID e.g. TCH-0001). Papers need Principal approval before print.</div>
+  <div class="grid">
+    <a class="card" href="../teacher-dashboard.html"><strong>Dashboard</strong><span>Overview</span></a>
+    <a class="card" href="../attendance.html"><strong>Attendance</strong><span>Mark class</span></a>
+    <a class="card" href="../homework.html"><strong>Homework</strong><span>Assign & review</span></a>
+    <a class="card" href="../paper-maker.html"><strong>Paper maker</strong><span>Create exams</span></a>
+    <a class="card" href="../timetable.html"><strong>Timetable</strong><span>Schedule</span></a>
+    <a class="card" href="../announcements.html"><strong>Notices</strong><span>School updates</span></a>
+  </div>
+  <nav class="nav" aria-label="Teacher">
+    <a class="active" href="teacher-home.html">Home</a>
+    <a href="../attendance.html">Attendance</a>
+    <a href="../paper-maker.html">Papers</a>
+    <a href="../teacher-dashboard.html">More</a>
+  </nav>
+  <script>
+    fetch('/api/auth/me', { credentials: 'include' })
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (!d?.user) return;
+        const u = d.user;
+        document.getElementById('who').textContent = [u.firstName, u.publicCode || u.email].filter(Boolean).join(' · ');
+        if (u.role && u.role !== 'TEACHER') location.href = '../login.html';
+      })
+      .catch(() => {});
+  </script>
+<script type="module" src="../scripts/web-access-policy.js"></script>
+<footer class="app-credit text-center small text-muted py-3">Built by Ranjha Farhan</footer></body>
+</html>

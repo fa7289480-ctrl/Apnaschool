@@ -1,0 +1,20 @@
+{
+  "appId": "pk.apnaschool.superadmin",
+  "appName": "ApnaSchool Super Admin",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#165ddd",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#165ddd"
+    }
+  }
+}

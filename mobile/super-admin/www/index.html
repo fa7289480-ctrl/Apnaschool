@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ApnaSchool Super Admin platform dashboard">
+<meta name="theme-color" content="#14213d"><title>ApnaSchool · Super Admin</title>
+<link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+<style>:root{--navy:#14213d;--navy2:#1a2a4a;--ink:#0f172a;--muted:#64748b;--line:#e6eaf2;--bg:#f6f8fc;--blue:#2563eb;--blue2:#3b82f6;--green:#10b981;--purple:#7c3aed;--orange:#f97316;--amber:#f59e0b;--shadow:0 1px 2px #0f172a0a,0 6px 20px #0f172a0d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;margin:0;font:14px/1.5 Inter Variable,Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}button,input,select,textarea{font:inherit;color:inherit}a{color:inherit;text-decoration:none}[hidden]{display:none!important}.i{fill:none;stroke:currentColor;stroke-width:1.9px;stroke-linecap:round;stroke-linejoin:round;flex:none;width:20px;height:20px}.i.fill{fill:currentColor;stroke:none}.sidebar{z-index:30;color:#cbd5e5;background:linear-gradient(#14213d 0%,#16243f 60%,#14213d 100%);flex-direction:column;width:259px;display:flex;position:fixed;top:0;bottom:0;left:0;right:auto}.brand{border-bottom:1px solid #ffffff14;align-items:center;gap:10px;height:80px;padding:0 20px;display:flex}.brand svg{width:48px;height:36px}.brand b{letter-spacing:-.6px;color:#fff;font-size:24px;font-weight:700}.brand b em{color:#60a5fa;font-style:normal;font-weight:600}.nav{gap:4px;padding:16px 14px;display:grid}.nav a{color:#cbd5e5;border-radius:12px;align-items:center;gap:14px;height:54px;padding:0 16px;font-size:15.5px;font-weight:500;transition:background .15s,color .15s;display:flex}.nav a:hover{color:#fff;background:#ffffff10}.nav a.active{color:#fff;background:#1d6ff2;font-weight:600;box-shadow:0 6px 16px #1d6ff233}.nav .i{color:#9fb0c9;width:24px;height:24px}.nav a.active .i,.nav a:hover .i{color:#fff}.nav .badge{color:#fff;background:#ef4444;border-radius:999px;margin-left:auto;padding:1px 7px;font-size:11px;font-weight:700}.sb-card{color:#fff;background:#ffffff10;border:1px solid #ffffff0d;border-radius:14px;margin:auto 14px 24px;padding:16px}.sb-card .row{align-items:center;gap:10px;font-size:15px;font-weight:700;display:flex}.sb-card .i{color:#fbbf24;width:24px;height:24px}.sb-card p{color:#b6c3d9;margin:3px 0 0 34px;font-size:13.5px;line-height:1.35}.main{min-width:0;margin-left:259px}.topbar{border-bottom:1px solid var(--line);z-index:20;background:#fff;justify-content:space-between;align-items:center;gap:16px;height:80px;padding:0 28px;display:flex;position:sticky;top:0}.menu-btn{border:1px solid var(--line);cursor:pointer;background:#fff;border-radius:10px;place-items:center;width:40px;height:40px;display:none}.search{color:#64748b;background:#f1f4f9;border:1px solid #e9edf4;border-radius:14px;flex:1;align-items:center;gap:12px;min-width:0;max-width:648px;height:48px;padding:0 18px;display:flex}.search input{background:0 0;border:0;outline:0;flex:1;min-width:0;font-size:15px}.search:focus-within{background:#fff;border-color:#93b4f5;box-shadow:0 0 0 3px #2563eb18}.top-right{align-items:center;gap:20px;display:flex}.bell{cursor:pointer;color:#475569;background:0 0;border:0;border-radius:10px;place-items:center;width:40px;height:40px;display:grid;position:relative}.bell:hover{background:#f1f4f9}.bell .i{width:26px;height:26px}.bell i{color:#fff;text-align:center;background:#ef4444;border-radius:999px;min-width:19px;height:19px;padding:0 4px;font:700 11px/19px Inter,sans-serif;position:absolute;top:2px;right:3px}.me{align-items:center;gap:12px;display:flex}.avatar{color:#fff;background:linear-gradient(135deg,#7c5cf5,#6d4ae0);border-radius:50%;place-items:center;width:50px;height:50px;font-size:17px;font-weight:700;display:grid}.me b{font-size:15.5px;line-height:1.2;display:block}.me small{color:var(--muted);font-size:13px}.me .i{color:#64748b;width:16px;height:16px}.logout{cursor:pointer;background:0 0;border:0;border-radius:8px;align-items:center;gap:4px;padding:6px;display:flex}.logout:hover{background:#f1f4f9}.content{max-width:1700px;margin:auto;padding:32px 28px 40px}.welcome{flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:26px;display:flex}.welcome h1{letter-spacing:-.9px;margin:0;font-size:34px;font-weight:800;line-height:1.15}.welcome p{color:#334155;margin:6px 0 0;font-size:16px}.date-chip{border:1px solid var(--line);height:52px;box-shadow:var(--shadow);color:#1e293b;background:#fff;border-radius:12px;align-items:center;gap:12px;padding:0 22px;font-size:16px;font-weight:500;display:flex}.date-chip .i{color:#475569;width:24px;height:24px}.banner{color:#991b1b;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;align-items:flex-start;gap:10px;margin-bottom:18px;padding:12px 16px;font-size:14px;display:flex}.banner a{font-weight:700;text-decoration:underline}.stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-bottom:24px;display:grid}.stat{border:1px solid var(--bd);background:linear-gradient(135deg,var(--bg1),var(--bg2));border-radius:18px;align-items:center;gap:18px;min-height:120px;padding:22px 24px;display:flex;position:relative;overflow:hidden}.stat .ic{background:var(--ic-bg);width:68px;height:68px;color:var(--ic);z-index:1;border-radius:18px;flex:none;place-items:center;display:grid}.stat .ic .i{width:36px;height:36px}.stat .num{letter-spacing:-1px;font-size:32px;font-weight:800;line-height:1.1}.stat .lbl{color:#475569;margin-top:4px;font-size:16px}.stat .info{z-index:1;min-width:0}.stat .delta{color:var(--dc);background:var(--dbg);z-index:1;border-radius:8px;align-items:center;gap:3px;padding:2px 9px;font-size:13.5px;font-weight:600;display:flex;position:absolute;top:18px;right:18px}.stat .delta .i{stroke-width:2.6px;width:14px;height:14px}.stat svg.wave{opacity:.9;width:62%;height:55%;position:absolute;bottom:0;right:0}.s-blue{--bg1:#f2f7ff;--bg2:#eaf1ff;--bd:#cfdcf7;--ic-bg:#dbe8ff;--ic:#2563eb;--dc:#16a34a;--dbg:#e8f7ee;--w:#d7e5ff}.s-green{--bg1:#f1fcf6;--bg2:#e9faf1;--bd:#cdeedd;--ic-bg:#d1f5e1;--ic:#10b981;--dc:#16a34a;--dbg:#dff6ea;--w:#c9f3dc}.s-purple{--bg1:#faf6ff;--bg2:#f3ecff;--bd:#e1d5f7;--ic-bg:#e9dcff;--ic:#7c3aed;--dc:#64748b;--dbg:#ece5fb;--w:#e6dafb}.s-amber{--bg1:#fffaf0;--bg2:#fff3df;--bd:#f6e2bd;--ic-bg:#ffe9c2;--ic:#f59e0b;--dc:#16a34a;--dbg:#e6f6e6;--w:#ffe6bd}.card{border:1px solid var(--line);box-shadow:var(--shadow);background:#fff;border-radius:18px;min-width:0}.row3{grid-template-columns:minmax(0,1.62fr) minmax(0,1fr) minmax(0,.86fr);gap:22px;margin-bottom:22px;display:grid}.row2{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;display:grid}.card-pad{padding:22px 24px}.card h2{letter-spacing:-.4px;align-items:center;gap:10px;margin:0;font-size:21px;font-weight:700;display:flex}.card h2 .i{width:26px;height:26px}.head{justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;display:flex}.sel{border:1px solid var(--line);-webkit-appearance:none;appearance:none;cursor:pointer;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E") right 12px center no-repeat;border-radius:10px;height:42px;padding:0 34px 0 14px;font-size:14.5px;font-weight:500}.legend{color:#334155;justify-content:center;gap:24px;margin:2px 0 6px;font-size:14px;display:flex}.legend span{align-items:center;gap:7px;display:flex}.legend i{border-radius:50%;width:11px;height:11px}.chart{position:relative}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart .tip{pointer-events:none;color:#fff;white-space:nowrap;z-index:3;background:#0f172a;border-radius:10px;padding:9px 12px;font-size:12.5px;line-height:1.55;position:absolute;transform:translate(-50%,-105%);box-shadow:0 10px 28px #0f172a40}.tip b{margin-bottom:2px;display:block}.tip span{align-items:center;gap:6px;display:flex}.tip i{border-radius:50%;width:8px;height:8px}.empty{text-align:center;color:var(--muted);place-items:center;padding:28px 10px;font-size:14px;display:grid}.donut-wrap{flex-wrap:wrap;justify-content:space-around;align-items:center;gap:10px;margin-top:20px;display:flex}.donut{width:206px;height:206px;position:relative}.donut svg{width:100%;height:100%;transform:rotate(-90deg)}.donut .mid{text-align:center;place-content:center;display:grid;position:absolute;top:0;bottom:0;left:0;right:0}.donut .mid b{letter-spacing:-1px;font-size:34px;line-height:1.1}.donut .mid span{color:#334155;font-size:17px}.dl{gap:18px;display:grid}.dl div{-moz-column-gap:10px;grid-template-columns:14px 1fr;column-gap:10px;font-size:16px;font-weight:600;display:grid}.dl i{border-radius:50%;width:13px;height:13px;margin-top:6px}.dl small{color:#475569;grid-column:2;margin-top:-2px;font-size:14px;font-weight:400}.qa{gap:12px;margin-top:20px;display:grid}.qa button,.qa a{cursor:pointer;color:#fff;border:0;border-radius:11px;align-items:center;gap:16px;height:55px;padding:0 20px;font-size:16.5px;font-weight:600;transition:transform .12s,filter .12s;display:flex}.qa button:hover,.qa a:hover{filter:brightness(1.06);transform:translateY(-1px)}.qa .i{width:26px;height:26px}.qa .b1{background:#2563eb}.qa .b2{background:#12b76a}.qa .b3{background:#7c4ddf}.qa .b4{color:#111c32;background:#f1f4f8}.link{color:#2563eb;cursor:pointer;background:0 0;border:0;align-items:center;gap:6px;padding:0;font-size:15.5px;font-weight:600;display:inline-flex}.link .i{width:18px;height:18px}.link:hover{text-decoration:underline}.act{margin:0;padding:0;list-style:none}.act li{border-bottom:1px solid #eef1f6;align-items:center;gap:14px;padding:13px 0;font-size:16px;display:flex}.act li:last-child{border-bottom:0}.act .ai{color:#fff;border-radius:50%;flex:none;place-items:center;width:32px;height:32px;display:grid}.act .ai .i{stroke-width:2.4px;width:18px;height:18px}.act .t{text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;overflow:hidden}.act .t span{color:#475569}.act time{color:#475569;white-space:nowrap;font-size:15.5px}.ann{gap:14px;display:grid}.ann article{-moz-column-gap:12px;border-left:3px solid #2563eb;grid-template-columns:1fr auto;gap:2px 12px;padding:2px 0 2px 16px;display:grid}.ann h3{margin:0;font-size:17px;font-weight:700}.ann p{color:#334155;grid-column:1/-1;margin:0;font-size:15.5px}.pill{color:#2563eb;background:#eaf2ff;border-radius:8px;height:-moz-fit-content;height:fit-content;padding:3px 10px;font-size:13.5px;font-weight:600}.view-head{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px;display:flex}.view-head h1{letter-spacing:-.7px;margin:0;font-size:28px}.view-head p{color:var(--muted);margin:4px 0 0}.tools{flex-wrap:wrap;align-items:center;gap:10px;display:flex}.btn{border:1px solid var(--line);cursor:pointer;background:#fff;border-radius:10px;align-items:center;gap:8px;height:42px;padding:0 16px;font-weight:600;display:inline-flex}.btn:hover{background:#f6f8fc}.btn.primary{color:#fff;background:#2563eb;border-color:#2563eb}.btn.primary:hover{background:#1d4fd7}.btn.danger{color:#b91c1c;background:#fff5f5;border-color:#fecaca}.btn.sm{border-radius:8px;height:32px;padding:0 11px;font-size:13px}.btn:disabled{opacity:.55;cursor:not-allowed}.tbl{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14.5px}th{text-align:left;letter-spacing:.6px;text-transform:uppercase;color:#7b8798;border-bottom:1px solid var(--line);white-space:nowrap;padding:13px 16px;font-size:12px;font-weight:700}td{vertical-align:middle;border-bottom:1px solid #eef1f6;padding:14px 16px}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#fafbfe}td small{color:var(--muted);font-size:12.5px;display:block}.acts{flex-wrap:wrap;gap:6px;display:flex}.st{letter-spacing:.2px;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;display:inline-block}.st.ACTIVE{color:#15803d;background:#dcfce7}.st.TRIAL{color:#1d4ed8;background:#dbeafe}.st.PENDING{color:#b45309;background:#fef3c7}.st.EXPIRED{color:#c2410c;background:#ffedd5}.st.SUSPENDED,.st.REJECTED{color:#b91c1c;background:#fee2e2}.pager{border-top:1px solid var(--line);color:var(--muted);justify-content:space-between;align-items:center;padding:14px 20px;font-size:13.5px;display:flex}.form-row{gap:6px;margin-bottom:14px;display:grid}.form-row label{font-size:13.5px;font-weight:600}.inp{background:#fff;border:1px solid #d6dce8;border-radius:10px;outline:0;width:100%;min-height:44px;padding:10px 12px}.inp:focus{border-color:#2563eb;box-shadow:0 0 0 3px #2563eb1f}textarea.inp{resize:vertical;min-height:84px}.set-item{border-bottom:1px solid #eef1f6;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;display:flex}.set-item:last-child{border-bottom:0}.set-item b{display:block}.set-item small{color:var(--muted)}dialog{border:0;border-radius:18px;width:min(460px,92vw);padding:0;box-shadow:0 30px 80px #0f172a55}dialog::backdrop{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);background:#0f172a80}dialog form{padding:24px}dialog h3{margin:0 0 6px;font-size:20px}dialog p{color:#475569;margin:0 0 16px}.dlg-actions{justify-content:flex-end;gap:10px;margin-top:18px;display:flex}#toast{color:#fff;z-index:100;opacity:0;pointer-events:none;background:#0f172a;border-radius:12px;max-width:380px;padding:14px 18px;font-size:14px;transition:all .2s;position:fixed;bottom:22px;right:22px;transform:translateY(10px);box-shadow:0 14px 40px #0f172a40}#toast.show{opacity:1;transform:none}#toast.err{background:#b91c1c}.scrim{display:none}@media (max-width:1380px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.row3{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.row3>:first-child{grid-column:1/-1}}@media (max-width:1100px){.row2{grid-template-columns:1fr}}@media (max-width:900px){.sidebar{transition:transform .2s;transform:translate(-100%);box-shadow:0 0 40px #0006}.sidebar.open{transform:none}.scrim.show{z-index:25;background:#0f172a66;display:block;position:fixed;top:0;bottom:0;left:0;right:0}.main{margin-left:0}.menu-btn{display:grid}.topbar{height:70px;padding:0 14px}.me div{display:none}.content{padding:22px 14px 30px}.welcome h1{font-size:26px}.top-right{gap:8px}}@media (max-width:680px){.stats,.row3{grid-template-columns:1fr}.stat .num{font-size:28px}.card-pad{padding:18px 16px}.act li{flex-wrap:wrap;font-size:14.5px}.act time{width:100%;margin-left:46px;font-size:13px}.act .t{white-space:normal}.date-chip{height:44px;padding:0 14px;font-size:14px}}</style>  <script type="module" crossorigin src="./assets/main-DOEXt1ao.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="./assets/api-client-z-oFFDhr.js">
+  <link rel="stylesheet" crossorigin href="./assets/inter-B_VMY_PD.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-school" viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-4 7 4v10M12 3v4M9 21v-5h6v5M8 13h.01M12 13h.01M16 13h.01" /></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20V11M12 20V4M19 20v-6"/></symbol>
+<symbol id="i-support" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="m5.6 5.6 3.9 3.9M14.5 14.5l3.9 3.9M18.4 5.6l-3.9 3.9M9.5 14.5l-3.9 3.9"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10.3 20a2 2 0 0 0 3.4 0"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5.5l3.5 2"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h3l8 4.5V4.5L7 9H4a1 1 0 0 0-1 1zM19 9a4 4 0 0 1 0 6"/><path d="M7 15l1.5 5h2.5l-1.2-4.6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4.5" height="6" rx="2"/><rect x="16.5" y="14" width="4.5" height="6" rx="2"/><path d="M19 20c0 1.5-2 2-5 2"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5V13M12 16.5h.01"/></symbol>
+<symbol id="i-badge" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 9h6M9 13h6M9 17h3"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m-5-4.5 5 5 5-5M5 20h14"/></symbol>
+<symbol id="wave" viewBox="0 0 200 70" preserveAspectRatio="none"><path d="M0 70C40 66 70 52 105 38s60-22 95-26v58z" fill="currentColor"/></symbol>
+</defs></svg>
+
+<aside class="sidebar" id="sidebar">
+<a class="brand" href="#dashboard" aria-label="ApnaSchool">
+<svg viewBox="0 0 56 42" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38a3ff"/><stop offset="1" stop-color="#1d5fe6"/></linearGradient></defs><path d="M28 2 2 14l26 12 26-12z" fill="url(#g)"/><path d="M12 22v10c0 4 7 8 16 8s16-4 16-8V22l-16 7.5z" fill="#2b74ee"/><path d="M50 16v14" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/></svg>
+<b>Apna<em>School</em></b></a>
+<nav class="nav" aria-label="Main navigation">
+<a href="#dashboard" data-nav="dashboard"><svg class="i"><use href="#i-home"/></svg>Dashboard</a>
+<a href="#schools" data-nav="schools"><svg class="i"><use href="#i-school"/></svg>Schools<span class="badge" id="navSchoolsBadge" hidden></span></a>
+<a href="#plans" data-nav="plans"><svg class="i"><use href="#i-card"/></svg>Plans &amp; Subscriptions</a>
+<a href="#payments" data-nav="payments"><svg class="i"><use href="#i-card"/></svg>Payments<span class="badge" id="navPayBadge" hidden></span></a>
+<a href="#users" data-nav="users"><svg class="i"><use href="#i-users"/></svg>Users</a>
+<a href="#reports" data-nav="reports"><svg class="i"><use href="#i-chart"/></svg>Reports</a>
+<a href="#support" data-nav="support"><svg class="i"><use href="#i-support"/></svg>Support</a>
+<a href="#settings" data-nav="settings"><svg class="i"><use href="#i-gear"/></svg>Settings</a>
+</nav>
+<div class="sb-card"><div class="row"><svg class="i"><use href="#i-crown"/></svg>Super Admin</div><p>Manage the entire platform</p></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<div class="main">
+<header class="topbar">
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation"><svg class="i"><use href="#i-menu"/></svg></button>
+<label class="search"><svg class="i"><use href="#i-search"/></svg><input id="globalSearch" type="search" placeholder="Search schools, users..." aria-label="Search schools and users" autocomplete="off"></label>
+<div class="top-right">
+<button class="bell" id="bell" aria-label="Pending approvals" title="Pending approvals"><svg class="i"><use href="#i-bell"/></svg><i id="bellCount" hidden>0</i></button>
+<div class="me"><span class="avatar" id="meAvatar">SA</span><div><b id="meName">Super Admin</b><small>Super Admin</small></div></div>
+<button class="logout" id="logoutBtn" aria-label="Sign out" title="Sign out"><svg class="i"><use href="#i-logout"/></svg></button>
+</div>
+</header>
+
+<main class="content">
+<div class="banner" id="banner" hidden><svg class="i"><use href="#i-alert"/></svg><div id="bannerText"></div></div>
+
+<!-- DASHBOARD -->
+<section data-view="dashboard">
+<div class="welcome"><div><h1>Welcome back, <span id="welcomeName">Super Admin</span>!</h1><p>Here's what's happening on ApnaSchool today.</p></div>
+<div class="date-chip"><svg class="i"><use href="#i-cal"/></svg><span id="todayChip"></span></div></div>
+
+<div class="stats">
+<article class="stat s-blue"><svg class="wave" style="color:var(--w)"><use href="#wave"/></svg><span class="delta" id="dSchools"></span><span class="ic"><svg class="i"><use href="#i-school"/></svg></span><div class="info"><div class="num" id="tSchools">—</div><div class="lbl">Total Schools</div></div></article>
+<article class="stat s-green"><svg class="wave" style="color:var(--w)"><use href="#wave"/></svg><span class="delta" id="dStudents"></span><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><div class="info"><div class="num" id="tStudents">—</div><div class="lbl">Total Students</div></div></article>
+<article class="stat s-purple"><svg class="wave" style="color:var(--w)"><use href="#wave"/></svg><span class="delta" id="dTeachers"></span><span class="ic"><svg class="i"><use href="#i-user"/></svg></span><div class="info"><div class="num" id="tTeachers">—</div><div class="lbl">Total Teachers</div></div></article>
+<article class="stat s-amber"><svg class="wave" style="color:var(--w)"><use href="#wave"/></svg><span class="delta" id="dRevenue"></span><span class="ic"><svg class="i"><use href="#i-card"/></svg></span><div class="info"><div class="num" id="tRevenue">—</div><div class="lbl">Total Revenue</div></div></article>
+</div>
+
+<div class="row3">
+<article class="card card-pad"><div class="head"><h2><svg class="i" style="color:#4f46e5"><use href="#i-chart"/></svg>Platform Overview</h2>
+<select class="sel" id="monthsSel" aria-label="Range"><option value="6">Last 6 Months</option><option value="12">Last 12 Months</option></select></div>
+<div class="legend"><span><i style="background:#2563eb"></i>Schools</span><span><i style="background:#10b981"></i>Students</span><span><i style="background:#8b5cf6"></i>Revenue (PKR)</span></div>
+<div class="chart" id="chart"><div class="empty">Loading…</div></div></article>
+
+<article class="card card-pad"><div class="head"><h2><svg class="i" style="color:#f5b301"><use href="#i-crown"/></svg>Subscription Status</h2></div>
+<div class="donut-wrap"><div class="donut"><svg viewBox="0 0 120 120" id="donutSvg"></svg><div class="mid"><b id="donutPct">0%</b><span>Active</span></div></div>
+<div class="dl"><div><i style="background:#10b981"></i>Active<small id="lgActive">(0 Schools)</small></div><div><i style="background:#3b82f6"></i>Trial<small id="lgTrial">(0 Schools)</small></div><div><i style="background:#f97316"></i>Expired<small id="lgExpired">(0 Schools)</small></div></div></div></article>
+
+<article class="card card-pad"><div class="head"><h2><svg class="i" style="color:#334155"><use href="#i-bolt"/></svg>Quick Actions</h2></div>
+<div class="qa"><a class="b1" href="/register.html" target="_blank" rel="noopener"><svg class="i"><use href="#i-school"/></svg>Add New School</a>
+<button class="b2" data-go="plans"><svg class="i"><use href="#i-card"/></svg>Manage Plans</button>
+<button class="b3" data-go="reports"><svg class="i"><use href="#i-chart"/></svg>View Reports</button>
+<button class="b4" data-go="support"><svg class="i"><use href="#i-headset"/></svg>Support Tickets</button></div></article>
+</div>
+
+<div class="row2">
+<article class="card card-pad"><div class="head"><h2><svg class="i" style="color:#334155"><use href="#i-clock"/></svg>Recent Activity</h2><button class="link" data-go="reports">View All <svg class="i"><use href="#i-right"/></svg></button></div><ul class="act" id="activity"><li class="empty">Loading…</li></ul></article>
+<article class="card card-pad"><div class="head"><h2><svg class="i" style="color:#334155"><use href="#i-mega"/></svg>Latest Announcements</h2><button class="link" data-go="settings">View All <svg class="i"><use href="#i-right"/></svg></button></div><div class="ann" id="announcements"><div class="empty">Loading…</div></div></article>
+</div>
+</section>
+
+<!-- SCHOOLS -->
+<section data-view="schools" hidden>
+<div class="view-head"><div><h1>Schools</h1><p>Approve registrations, assign plans and suspend or restore schools.</p></div>
+<div class="tools"><select class="sel" id="schoolStatus" aria-label="Status"><option value="">All statuses</option><option>PENDING</option><option>TRIAL</option><option>ACTIVE</option><option>EXPIRED</option><option>SUSPENDED</option><option>REJECTED</option></select><a class="btn primary" href="/register.html" target="_blank" rel="noopener"><svg class="i"><use href="#i-plus"/></svg>Add New School</a></div></div>
+<div class="card"><div class="tbl"><table><thead><tr><th>School</th><th>Registered</th><th>Status</th><th>Plan</th><th>Actions</th></tr></thead><tbody id="schoolRows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div><div class="pager"><span id="schoolPageInfo"></span><span class="tools"><button class="btn sm" id="schoolPrev">Previous</button><button class="btn sm" id="schoolNext">Next</button></span></div></div>
+</section>
+
+<!-- PLANS -->
+<section data-view="plans" hidden>
+<div class="view-head"><div><h1>Plans &amp; Subscriptions</h1><p>Configured plan durations and the current subscription split. No plan prices are assumed.</p></div><div class="tools"><button class="btn primary" id="configPlan"><svg class="i"><use href="#i-plus"/></svg>Configure plan duration</button></div></div>
+<div class="row2"><div class="card"><div class="tbl"><table><thead><tr><th>Plan</th><th>Duration</th><th>Updated</th></tr></thead><tbody id="planRows"><tr><td colspan="3" class="empty">Loading…</td></tr></tbody></table></div></div>
+<div class="card card-pad"><h2>Subscription split</h2><div class="set-item"><b>Active</b><span id="plActive">—</span></div><div class="set-item"><b>Trial</b><span id="plTrial">—</span></div><div class="set-item"><b>Expired</b><span id="plExpired">—</span></div><div class="set-item"><b>Free trial length</b><span id="plTrialDays">—</span></div></div></div>
+</section>
+
+<!-- PAYMENTS -->
+<section data-view="payments" hidden>
+<div class="view-head"><div><h1>Payments</h1><p>Subscription payments awaiting manual verification. Tuition fees are managed separately by each school.</p></div><div class="tools"><select class="sel" id="payStatus" aria-label="Payment status"><option value="PENDING">Pending</option><option value="VERIFIED">Verified</option><option value="REJECTED">Rejected</option><option value="">All</option></select><button class="btn" id="refreshPay">Refresh</button></div></div>
+<div class="card"><div class="tbl"><table><thead><tr><th>School</th><th>Amount</th><th>Method</th><th>Submitted</th><th>Status</th><th>Actions</th></tr></thead><tbody id="paymentRows"><tr><td colspan="6" class="empty">Loading…</td></tr></tbody></table></div></div>
+</section>
+
+<!-- USERS -->
+<section data-view="users" hidden>
+<div class="view-head"><div><h1>Users</h1><p>User, student and teacher counts for every school on the platform.</p></div></div>
+<div class="card"><div class="tbl"><table><thead><tr><th>School</th><th>Users</th><th>Students</th><th>Teachers</th><th>Status</th></tr></thead><tbody id="userRows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody></table></div></div>
+</section>
+
+<!-- REPORTS -->
+<section data-view="reports" hidden>
+<div class="view-head"><div><h1>Reports</h1><p>Monthly platform growth and the latest audited administrator activity.</p></div><div class="tools"><button class="btn primary" id="exportCsv"><svg class="i"><use href="#i-down"/></svg>Download CSV</button></div></div>
+<div class="card" style="margin-bottom:22px"><div class="tbl"><table><thead><tr><th>Month</th><th>Total schools</th><th>Total students</th><th>Verified revenue (PKR)</th></tr></thead><tbody id="reportRows"><tr><td colspan="4" class="empty">Loading…</td></tr></tbody></table></div></div>
+<article class="card card-pad"><h2>Recent activity</h2><ul class="act" id="activity2"></ul></article>
+</section>
+
+<!-- SUPPORT -->
+<section data-view="support" hidden>
+<div class="view-head"><div><h1>Support</h1><p>Support tickets</p></div></div>
+<div class="card card-pad"><div class="empty">A support-ticket system is not connected to the backend yet, so there are no tickets to show.<br>Nothing here is sample data.</div></div>
+</section>
+
+<!-- SETTINGS -->
+<section data-view="settings" hidden>
+<div class="view-head"><div><h1>Settings</h1><p>Platform-wide registration policy and announcements.</p></div></div>
+<div class="row2"><article class="card card-pad"><h2>School registration</h2>
+<div class="set-item"><div><b>Approval mode</b><small>Applies to new school registrations only.</small></div><div class="tools"><strong id="modeLabel">—</strong><button class="btn sm" id="toggleMode">Switch</button></div></div></article>
+<article class="card card-pad"><h2>Publish announcement</h2><div style="margin-top:14px"><div class="form-row"><label for="annTitle">Title</label><input class="inp" id="annTitle" maxlength="120"></div><div class="form-row"><label for="annMsg">Message</label><textarea class="inp" id="annMsg" maxlength="500"></textarea></div><button class="btn primary" id="annSend">Publish</button></div></article></div>
+<article class="card card-pad" style="margin-top:22px"><h2>Latest announcements</h2><div class="ann" id="announcements2" style="margin-top:14px"></div></article>
+</section>
+</main>
+</div>
+
+<dialog id="dlg"><form method="dialog" id="dlgForm"><h3 id="dlgTitle"></h3><p id="dlgMsg"></p><div id="dlgField"></div><div class="dlg-actions"><button class="btn" value="cancel" id="dlgCancel" type="button">Cancel</button><button class="btn primary" id="dlgOk" value="ok">Confirm</button></div></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<footer class="app-credit text-center small text-muted py-3">Built by Ranjha Farhan</footer></body></html>

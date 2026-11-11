@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ApnaSchool Student</string>
+    <string name="title_activity_main">ApnaSchool Student</string>
+    <string name="package_name">pk.apnaschool.student</string>
+    <string name="custom_url_scheme">pk.apnaschool.student</string>
+</resources>

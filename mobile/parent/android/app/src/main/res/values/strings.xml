@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ApnaSchool Parent</string>
+    <string name="title_activity_main">ApnaSchool Parent</string>
+    <string name="package_name">pk.apnaschool.parent</string>
+    <string name="custom_url_scheme">pk.apnaschool.parent</string>
+</resources>

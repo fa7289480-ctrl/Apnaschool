@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="apnaschool-api-base" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>ApnaSchool Parent</title>
+  <style>
+    :root { --bg:#f0fdfa; --card:#fff; --primary:#0f766e; --text:#134e4a; --muted:#5b7c78; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.45 system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 16px; padding-bottom: 88px; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    h1 { font-size: 1.25rem; margin: 0; }
+    .muted { color: var(--muted); font-size: .9rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    a.card { display: block; background: var(--card); border-radius: 14px; padding: 16px; text-decoration: none; color: inherit; border: 1px solid #cce8e4; box-shadow: 0 1px 2px rgba(15,118,110,.06); }
+    a.card strong { display: block; margin-bottom: 4px; }
+    a.card span { font-size: .85rem; color: var(--muted); }
+    .nav { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid #d5ebe8; display: flex; justify-content: space-around; padding: 10px 8px calc(10px + env(safe-area-inset-bottom)); }
+    .nav a { text-decoration: none; color: var(--muted); font-size: .75rem; text-align: center; }
+    .nav a.active { color: var(--primary); font-weight: 600; }
+    .banner { background: #ccfbf1; border-radius: 12px; padding: 12px; margin-bottom: 14px; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Parent</h1>
+      <p class="muted" id="who">ApnaSchool mobile</p>
+    </div>
+    <a href="../login.html" class="muted">Sign out</a>
+  </header>
+  <div class="banner">Exam papers and answer keys are not shown here until the school publishes results. Use PAR-#### or email to sign in.</div>
+  <div class="grid">
+    <a class="card" href="../parent-dashboard.html"><strong>Dashboard</strong><span>Overview</span></a>
+    <a class="card" href="../my-fees.html"><strong>Fees</strong><span>Vouchers & status</span></a>
+    <a class="card" href="../my-results.html"><strong>Results</strong><span>Published only</span></a>
+    <a class="card" href="../my-homework.html"><strong>Homework</strong><span>Child tasks</span></a>
+    <a class="card" href="../announcements.html"><strong>Notices</strong><span>School news</span></a>
+    <a class="card" href="../guardian-verification.html"><strong>Guardian</strong><span>Verification</span></a>
+  </div>
+  <nav class="nav" aria-label="Parent">
+    <a class="active" href="parent-home.html">Home</a>
+    <a href="../my-fees.html">Fees</a>
+    <a href="../my-results.html">Results</a>
+    <a href="../parent-dashboard.html">More</a>
+  </nav>
+  <script>
+    fetch('/api/auth/me', { credentials: 'include' })
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (!d?.user) return;
+        const u = d.user;
+        document.getElementById('who').textContent = [u.firstName, u.publicCode || u.email].filter(Boolean).join(' · ');
+        if (u.role && u.role !== 'PARENT') location.href = '../login.html';
+      })
+      .catch(() => {});
+  </script>
+<script type="module" src="../scripts/web-access-policy.js"></script>
+<footer class="app-credit text-center small text-muted py-3">Built by Ranjha Farhan</footer></body>
+</html>
